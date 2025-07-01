@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>This is the Text Translation client library for developing .NET applications with rich experience.</Description>
     <AssemblyTitle>Azure SDK Code Generation Text Translation for Azure Data Plane</AssemblyTitle>
@@ -9,6 +9,10 @@
     <TargetFrameworks>$(RequiredTargetFrameworks)</TargetFrameworks>
     <IncludeOperationsSharedSource>true</IncludeOperationsSharedSource>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Azure.AI.Translation.Text.net8.0.cs" />
+    <Compile Remove="Azure.AI.Translation.Text.netstandard2.0.cs" />
+  </ItemGroup>
 
   <!-- Shared source from Azure.Core -->
   <ItemGroup>
